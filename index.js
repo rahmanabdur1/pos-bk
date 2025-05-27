@@ -13,8 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "https://pos-bk-beige.vercel.app",
-  credentials: true
+  origin: 'https://localhost:3000', // change this if needed
+  credentials: true,
 }));
 
 
