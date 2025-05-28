@@ -1,16 +1,14 @@
 import User from "../models/newUser.model.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
-
-// Email configuration
 const emailConfig = {
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-      
-    },
+  service: 'gmail',
+  auth: {
+    user: 'rahmanabdurr65@gmail.com',
+    pass: 'sviu rehb oqut galk', // Use an app password from Google, NOT your normal Gmail password
+  },
 };
+
 
 // Send OTP via Email
 const sendOTP = async (email, otp) => {
