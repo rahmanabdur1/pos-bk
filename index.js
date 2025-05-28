@@ -13,10 +13,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'https://localhost:3000', // change this if needed
+  origin: [
+    'http://localhost:3000', 
+    'https://localhost:3000',
+    'https://your-vercel-frontend-app.vercel.app'
+  ],
   credentials: true,
 }));
-
 
 // Increase the payload limit for JSON bodies
 app.use(express.json({ limit: '50mb' }));
